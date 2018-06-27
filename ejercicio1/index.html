@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+  <title>Lista Productos</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <script src="js/jQuery.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/data.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -15,20 +16,20 @@
 <body>
   <div class="row">
     <span class="col-3">
-      <input type="text" id="">
-      <button type="button" id="action1"></button>
+      <input type="text" id="IDMarca">
+      <button type="button" id="action1">Buscar Marca</button>
     </span>
     <span class="col-3">
-      <input type="text" id="">
-      <button type="button" id="action2"></button>
+      <input type="text" id="IDUbicacion">
+      <button type="button" id="action2">Buscar Ubicacion</button>
     </span>
     <span class="col-3">
-      <input type="text" id="">
-      <button type="button" id="action3"></button>
+      <input type="text" id="IDFecha">
+      <button type="button" id="action3">Buscar Fecha</button>
     </span>
     <span class="col-3">
-      <input type="text" id="">
-      <button type="button" id="action4"></button>
+      <input type="text" id="IDPrecio">
+      <button type="button" id="action4">Buscar Precio</button>
     </span>
   </div>
   <div class="table-wrapper">
@@ -37,16 +38,16 @@
         <strong></strong>
       </span>
       <span class="col-2">
-        <strong></strong>
+        <strong>Marca</strong>
       </span>
       <span class="col-2">
-        <strong></strong>
+        <strong>Ubicacion</strong>
       </span>
       <span class="col-2">
-        <strong></strong>
+        <strong>Fecha</strong>
       </span>
       <span class="col-2">
-        <strong></strong>
+        <strong>Precio</strong>
       </span>
       <span class="col-2">
         <strong></strong>
@@ -54,19 +55,10 @@
     </div>
 
     <div id="table-body">
-      <div class="row">
-        <span class="col-2"></span>
-        <span class="col-2"></span>
-        <span class="col-2"></span>
-        <span class="col-2"></span>
-        <span class="col-2"></span>
-        <span class="col-2"></span>
-        <span class="description col-12"></span>
-      </div>
     </div>
   </div>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
