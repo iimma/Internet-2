@@ -1,25 +1,30 @@
 
 
-
-var Tabla = {
+var Tabla = 
+{
     data:[],
 
-    setData:function(Data){
+    setData:function(Data)
+    {
         Tabla.data = Data;
     },
 
-    clear:function(){
+    clear:function()
+    {
         $("#table-body").html("");
     },
 
-    listAll:function(){
+    listAll:function()
+    {
         Tabla.clear();
-        for(var i = 0; i < Tabla.data.length; i++){
+        for(var i = 0; i < Tabla.data.length; i++)
+        {
             $("#table-body").append(Tabla.assamble(Tabla.data[i]));
         }
     },
 
-    assamble:function(Data){
+    assamble:function(Data)
+    {
         return '<div class="row">' +
                 '<span class="col-2">' + '</span>' +
                 '<span class="col-2">' + Data.brand + '</span>' +
@@ -31,69 +36,89 @@ var Tabla = {
             '</div>';
     },
     
-    filtroMarca:function(){
+    filtroMarca:function()
+    {
         Tabla.clear();
         var input = document.getElementById("IDMarca").value;
-        if(input == ""){
+        if(input == "")
+        {
             Tabla.listAll();
         }
-        for(var i = 0; i < Tabla.data.length; i++){
-            if(Tabla.data[i].brand == input){
+        for(var i = 0; i < Tabla.data.length; i++)
+        {
+            if(Tabla.data[i].brand == input)
+            {
                 $("#table-body").append(Tabla.assamble(Tabla.data[i]));
             }
         }
     },
 
-    filtroUbicacion:function(){
+    filtroUbicacion:function()
+    {
         Tabla.clear();
         var input = document.getElementById("IDUbicacion").value;
-        if(input == ""){
+        if(input == "")
+        {
             Tabla.listAll();
         }
-        for(var i = 0; i < Tabla.data.length; i++){
-            if(Tabla.data[i].location == input){
+        for(var i = 0; i < Tabla.data.length; i++)
+        {
+            if(Tabla.data[i].location == input)
+            {
                 $("#table-body").append(Tabla.assamble(Tabla.data[i]));
             }
         }
     },
 
-    filtroFecha:function(){
+    filtroFecha:function()
+    {
         Tabla.clear();
         var input = document.getElementById("IDFecha").value;
-        if(input == ""){
+        if(input == "")
+        {
             Tabla.listAll();
         }
-        for(var i = 0; i < Tabla.data.length; i++){
-            if(Tabla.data[i].lunch == input){
+        for(var i = 0; i < Tabla.data.length; i++)
+        {
+            if(Tabla.data[i].lunch == input)
+            {
                 $("#table-body").append(Tabla.assamble(Tabla.data[i]));
             }
         }
     },
 
-    filtroPrecio:function(){
+    filtroPrecio:function()
+    {
         Tabla.clear();
         var input = document.getElementById("IDPrecio").value;
-        if(input == ""){
+        if(input == "")
+        {
             Tabla.listAll();
         }
-        for(var i = 0; i < Tabla.data.length; i++){
-            if(Tabla.data[i].price == input){
+        for(var i = 0; i < Tabla.data.length; i++)
+        {
+            if(Tabla.data[i].price == input)
+            {
                 $("#table-body").append(Tabla.assamble(Tabla.data[i]));
             }
         }
     },
 }
 
-$("#action1").on("click", function(){
+$("#action1").on("click", function()
+{
     Tabla.filtroMarca();
 })
-$("#action2").on("click", function(){
+$("#action2").on("click", function()
+{
     Tabla.filtroUbicacion();
 })
-$("#action3").on("click", function(){
+$("#action3").on("click", function()
+{
     Tabla.filtroFecha();
 })
-$("#action4").on("click", function(){
+$("#action4").on("click", function()
+{
     Tabla.filtroPrecio();
 })
 
